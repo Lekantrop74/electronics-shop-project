@@ -41,7 +41,7 @@ class Item:
 
     @classmethod
     def instantiate_from_csv(cls) -> None:
-        """Cоздаем экзепляры класса на основе данных их файла"""
+        """Cоздаём экзепляры класса на основе данных их файла"""
         cls.all = []
         for data in load_csv_list():
             cls(*data)
