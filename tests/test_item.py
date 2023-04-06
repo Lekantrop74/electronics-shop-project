@@ -26,3 +26,16 @@ def test_str_item(test_object):
 
 def test_repr_item(test_object):
     assert (repr(test_object)) == "Item('Brick', 2.5, 100)"
+
+
+def test_add_method_with_item_objects():
+    item1 = Item("item1", 100, 10)
+    item2 = Item("item2", 200, 20)
+    assert (item1 + item2) == 30
+
+
+def test_add_method_with_non_item_object():
+    item1 = Item("item1", 100, 10)
+    with pytest.raises(ValueError):
+        item1 + "string"
+

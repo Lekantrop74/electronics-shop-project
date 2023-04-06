@@ -59,4 +59,10 @@ class Item:
 
     def __repr__(self):
         """Тандер для вывода информации об экземпляре"""
-        return f"Item{self.__name, self.price, self.quantity}"
+        return f"{self.__class__.__name__}{self.__name, self.price, self.quantity}"
+
+    def __add__(self, other):
+        if not isinstance(other, Item):
+            raise ValueError("Складывать можно только объекты Item и дочерние от них.")
+        else:
+            return self.quantity + other.quantity
