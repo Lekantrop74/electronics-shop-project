@@ -21,6 +21,7 @@ def test_number_of_sim_setter_negative_value(test_object):
     with pytest.raises(ValueError):
         test_object.number_of_sim = -1
 
+
 def test_repr_method(test_object):
     test_object = Phone("iPhone", 999, 10, 2)
     assert repr(test_object) == "Phone('iPhone', 999, 10, 2)"

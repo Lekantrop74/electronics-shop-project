@@ -38,4 +38,3 @@ def test_add_method_with_non_item_object():
     item1 = Item("item1", 100, 10)
     with pytest.raises(ValueError):
         item1 + "string"
-
