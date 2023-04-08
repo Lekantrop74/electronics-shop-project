@@ -1,5 +1,3 @@
-import self as self
-
 from src.item import Item
 
 
@@ -18,7 +16,7 @@ class Phone(Item):
 
     @number_of_sim.setter
     def number_of_sim(self, value):
-        if value <= 0:
+        if not isinstance(value, int) or value <= 0:
             raise ValueError("Количество физических SIM-карт должно быть целым числом больше нуля.")
         self._number_of_sim = value
 
